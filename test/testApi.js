@@ -60,7 +60,7 @@ describe('twitterClient', function(){
    		{
    			expect(results).to.have.property("statuses");
    			expect(results.statuses).to.be.above(0);
-   			// more test cases
+   			// more assertions
         // each status should have an id property and text property
 				
 				done();
@@ -75,23 +75,22 @@ describe('twitterClient', function(){
   describe('#updateStatus(text)', function(){
    	it('should return updated status', function(done){
 
-      var mockService = nock("https://api.twitter.com")
-         .post("/1.1/account/update.json")
-         .reply(200, {});
-
+      // POST text to "https://api.twitter.com/1.1/account/update.json"
 
    		twitterClient.updateStatus(data.newStatus, function(results)
    		{
    			expect(results).to.have.property("text");
    			expect(results.text).to.equal(data.newStatus);
 
-        // test for 140 character limit
+        
 				done();
    		});
 
     });
 	});
 });
+
+// test for 140 character limit when updating status
 
 describe('twitterClient', function(){
   describe('#show()', function(){
