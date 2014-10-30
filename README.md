@@ -17,6 +17,9 @@ There are two unit tests failing.  Provide the mocking necessary to complete the
 
 7) Commit your updated code to your repository for extra homework assignment credit.
 
+### Submit
+
+Enter your github repo in this [google doc](https://docs.google.com/spreadsheets/d/1xnkzwKVDz4-62O_SLkfH14DK0_KHqx0Pq6FCeQjNT-w/edit?usp=sharing).
 
 ### Updates
 
