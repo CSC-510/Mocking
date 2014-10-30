@@ -59,7 +59,7 @@ describe('twitterClient', function(){
    		twitterClient.search(data.query, function(results)
    		{
    			expect(results).to.have.property("statuses");
-   			expect(results.statuses).to.be.above(0);
+   			expect(results.statuses.length).to.be.above(0);
    			// more assertions
         // each status should have an id property and text property
 				
@@ -75,7 +75,7 @@ describe('twitterClient', function(){
   describe('#updateStatus(text)', function(){
    	it('should return updated status', function(done){
 
-      // POST text to "https://api.twitter.com/1.1/account/update.json"
+      // POST text to "https://api.twitter.com/1.1/statuses/update.json"
 
    		twitterClient.updateStatus(data.newStatus, function(results)
    		{
@@ -90,7 +90,20 @@ describe('twitterClient', function(){
 	});
 });
 
+
+
 // test for 140 character limit when updating status
+// var longMessage = "test for 140 character limit when updating status test for 140 character limit when updating status test for 140 character limit when updating status test for 140 character limit when updating status";
+// POST text to "https://api.twitter.com/1.1/statuses/update.json"
+// var mockService = nock("https://api.twitter.com")
+//  .post("/1.1/statuses/update.json", {"status":longMessage, "include_entities":1})
+//  .reply(413, {"error":"Message is too long"});
+
+
+
+// end new test case
+
+
 
 describe('twitterClient', function(){
   describe('#show()', function(){
