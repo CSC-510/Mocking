@@ -72,7 +72,6 @@ Now, there are alternative ways to write assertions, some people prefer a more "
 ## Unit Testing a Github Issue Analytics Program
 
 Suppose you had a program that performed some basic analytics on a code repo, such as finding who is assigned to fix bugs the most often, how many closed issues there are, and analyzing the amount of words in a body versus title.
-
 Performing analytics can be tricky because getting calculations right can take some time and there may be many weird edge cases to catch. Further, if you did test with real live data, you might exhaust your api access in running lots of tests.
 
 TDD (test-driven development), where you write test cases as you develop code is a great fit for this type of program. Mocking also helps us test our code with minimal dependency on having a live github service.
