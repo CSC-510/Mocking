@@ -1,6 +1,6 @@
 # Unit Testing
 
-In this workshop, you will learn about unit testing and mocking, specifically mocking responses to http requests to RESTful apis without needing to make a real call.
+In this workshop, you will learn about [unit testing and mocking](https://docs.google.com/presentation/d/1g3Vle16u0NS5iLpKcliTwC5ZVrDwVXJ69xGwZVeASrI/edit#slide=id.g1802376e63_0_0), specifically mocking responses to http requests to RESTful apis without needing to make a real call.
 
 ## Setup and Background
 
@@ -87,4 +87,4 @@ TDD (test-driven development), where you write test cases as you develop code is
 
 4. Oh no, *should handle empty body for issue #2*, is running, but now it is returning 1 instead of "NA". Why?
 
-5. Write a new function, "maxStars" that returns the name of repo with the most stars. You should be able to use existing `data.stars` as mock data. This will require digging through the program in order to understanding how everything workds.
+5. Write a new function, "maxStars" that returns the name of repo with the most stars. You should be able to use existing `data.stars` as mock data. This will require digging through the program in order to understanding how everything works.
