@@ -65,7 +65,7 @@ it('should return -1 when the value is not present', function() {
 });
 ```
 
-Now, there are alternative ways to write assertions, some people prefer a more "fluid" style of writing assertions, which is what the [chai](http://chaijs.com/). In the workshop, we use the "expect" style of assertions.
+Now, there are alternative ways to write assertions, some people prefer a more "fluid" style of writing assertions, which is what [chai](http://chaijs.com/) provides. In the workshop, we use the "expect" style of assertions.
 
 ![image](https://cloud.githubusercontent.com/assets/742934/18939984/b0d08004-85d2-11e6-85f3-ea690f2c5145.png)
 
