@@ -52,7 +52,7 @@ function titleBodyWordCountRatio(user,repo,number)
 				resolve("NA");
 				// HINT: http://stackoverflow.com/questions/4964484/why-does-split-on-an-empty-string-return-a-non-empty-array
 			}
-			console.log( titleWords, bodyWords, issue.body);			
+			//console.log( titleWords, bodyWords, issue.body);			
 			var str = ( titleWords / bodyWords ) + "";
 			resolve(str);
 		});

@@ -6,7 +6,7 @@ var querystring = require('querystring');
 var token = "token " + "YOUR TOKEN";
 var urlRoot = "https://api.github.com";
 
-function getRepoNames(userName)
+function getRepos(userName)
 {
 	var options = {
 		url: urlRoot + '/users/' + userName + "/repos",
@@ -23,8 +23,7 @@ function getRepoNames(userName)
 		request(options, function (error, response, body) 
 		{
 			var repos = JSON.parse(body);
-			var names = _.pluck(repos,"name")
-			resolve(names);
+			resolve(repos);
 		});
 	});
 }
@@ -73,6 +72,6 @@ function getAnIssue(owner, repo, number )
 	});
 }
 
-exports.getRepoNames = getRepoNames;
+exports.getRepos = getRepos;
 exports.getIssues = getIssues;
 exports.getAnIssue = getAnIssue;
