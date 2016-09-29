@@ -47,7 +47,7 @@ Unit testing often involves running a set of test cases that exist in a test sui
 
 In this example, you can see a test suite with two test cases and a before hook, which will be called before any test case is run. You can also call after hooks, which can be used to clean up after a set of test cases are run.
 
-```
+```javascript
 describe('earth', function(){
   before(function(){
     console.log('see.. this function is run ONCE only')
