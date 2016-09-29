@@ -87,4 +87,4 @@ TDD (test-driven development), where you write test cases as you develop code is
 
 4. Oh no, *should handle empty body for issue #2*, is running, but now it is returning 1 instead of "NA". Why?
 
-5. Write a new function, "maxStars" that returns the name of repo with the most stars. You should be able to use existing `data.stars` as mock data. This will require digging through the program in order to understanding how everything works.
+5. Write a new function, "maxStars" that returns the name of repo with the most stars. You should be able to use existing `github.getRepos()` function and `data.stars` as mock data. But, this will require digging through the program in order to understanding how everything works.
