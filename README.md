@@ -1,5 +1,7 @@
 # Unit Testing
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/CSC-510/Mocking.svg)](https://greenkeeper.io/)
+
 In this workshop, you will learn about [unit testing and mocking](https://docs.google.com/presentation/d/1g3Vle16u0NS5iLpKcliTwC5ZVrDwVXJ69xGwZVeASrI/edit#slide=id.g1802376e63_0_0), specifically mocking responses to http requests to RESTful apis without needing to make a real call.
 
 ## Setup and Background
