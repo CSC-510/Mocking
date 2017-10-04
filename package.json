@@ -11,7 +11,7 @@
   "devDependencies": {
     "async": "^2.5.0",
     "chai": "^4.1.2",
-    "mocha": "^3.5.3",
+    "mocha": "^4.0.0",
     "nock": "^9.0.17",
     "orchestrate": "^0.8.2",
     "underscore": "^1.6.0"
