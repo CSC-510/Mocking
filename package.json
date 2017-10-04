@@ -4,7 +4,7 @@
   "description": "A demonstration of using Nock and Mocha together with Chai.",
   "main": "bot.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha -R spec"
+    "test": "./node_modules/.bin/mocha --reporter spec test/*.js"
   },
   "author": "dear student<you@ncsu.edu>",
   "license": "ISC",
