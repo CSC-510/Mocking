@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "7"
+  - "node"
+install:
+  - npm install
+
+script:
+  - ./node_modules/.bin/mocha --reporter spec test/testTravisCI/sampleTest.js
