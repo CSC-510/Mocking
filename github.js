@@ -1,75 +1,54 @@
-var Promise = require("bluebird");
-var _ = require("underscore");
-var request = require("request");
-var querystring = require('querystring');
+const got  = require('got');
 
-var token = "token " + "YOUR TOKEN";
-var urlRoot = "https://api.github.com";
+const token = "token " + "YOUR TOKEN";
+const urlRoot = "https://api.github.com";
 
-function getRepos(userName)
-{
-	var options = {
-		url: urlRoot + '/users/' + userName + "/repos",
+async function getRepos(userName) {
+	const url = urlRoot + '/users/' + userName + "/repos";
+	const options = {
 		method: 'GET',
 		headers: {
 			"content-type": "application/json",
 			"Authorization": token
-		}
+		},
+		json: true
 	};
 
-	return new Promise(function (resolve, reject) 
-	{
-		// Send a http request to url and specify a callback that will be called upon its return.
-		request(options, function (error, response, body) 
-		{
-			var repos = JSON.parse(body);
-			resolve(repos);
-		});
-	});
+	// Send a http request to url
+	let repos = (await got(url, options)).body;
+	return repos;
 }
 
-function getIssues(owner, repo )
-{
-	var options = {
-		url: urlRoot + "/repos/" + owner +"/" + repo + "/issues",
+async function getIssues(owner, repo) {
+	const url = urlRoot + "/repos/" + owner + "/" + repo + "/issues";
+	const options = {
 		method: 'GET',
 		headers: {
 			"content-type": "application/json",
 			"Authorization": token
-		}
+		},
+		json: true
 	};
 
-	return new Promise(function (resolve, reject) 
-	{
-		// Send a http request to url and specify a callback that will be called upon its return.
-		request(options, function (error, response, body) 
-		{
-			var obj = JSON.parse(body);
-			resolve(obj);
-		});
-	});
+	// Send a http request to url
+	let issues = (await got(url, options)).body;
+	return issues;
 }
 
-function getAnIssue(owner, repo, number )
-{
-	var options = {
-		url: urlRoot + "/repos/" + owner +"/" + repo + "/issues/"+number,
+async function getAnIssue(owner, repo, number) {
+	const url = urlRoot + "/repos/" + owner + "/" + repo + "/issues/" + number;
+	const options = {
 		method: 'GET',
 		headers: {
 			"content-type": "application/json",
 			"Authorization": token
-		}
+		},
+		json: true
 	};
 
-	return new Promise(function (resolve, reject) 
-	{
-		// Send a http request to url and specify a callback that will be called upon its return.
-		request(options, function (error, response, body) 
-		{
-			var obj = JSON.parse(body);
-			resolve(obj);
-		});
-	});
+	// Send a http request to url
+	let issue = (await got(url, options)).body;
+	return issue;
 }
 
 exports.getRepos = getRepos;

@@ -86,7 +86,7 @@ TDD (test-driven development), where you write test cases as you develop code is
 
 2. *should find 4 closed issues* seems to be returning 6 instead of 4. Can we fix this?
 
-3. *should handle empty body for issue #2* doesn't seem to have any interceptors that trigger: "Uncaught Error: Nock: No match for request...". Can we add a new mock intercept?
+3. *should handle empty body for issue #2* doesn't seem to have any interceptors that trigger: `RequestError: Nock: No match for request...`. Can we add a new mock intercept?
 
 4. Oh no, *should handle empty body for issue #2*, is running, but now it is returning 1 instead of "NA". Why?
 
